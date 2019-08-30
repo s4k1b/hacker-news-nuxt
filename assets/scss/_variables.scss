@@ -1,0 +1,11 @@
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+$primary: #ff6d00;
+$primary-invert: findColorInvert($primary);
+$colors: (
+  'primary': (
+    $primary,
+    $primary-invert
+  )
+);
