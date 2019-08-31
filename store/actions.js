@@ -5,9 +5,8 @@ export default {
         `https://hacker-news.firebaseio.com/v0/${ob}.json`
       )
       commit('hnList$set', list.data || [])
-      console.log(list)
     } catch (e) {
-      console.log('Err: ', e)
+      throw e
     }
   }
 }

@@ -24,23 +24,43 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
-        <nuxt-link to="/top" class="navbar-item">
+        <nuxt-link
+          to="/top"
+          class="navbar-item"
+          :class="{ 'is-active': activeUrl === 'top' }"
+        >
           Top
         </nuxt-link>
 
-        <nuxt-link to="/new" class="navbar-item">
+        <nuxt-link
+          to="/new"
+          class="navbar-item"
+          :class="{ 'is-active': activeUrl === 'new' }"
+        >
           New
         </nuxt-link>
 
-        <nuxt-link to="/show" class="navbar-item">
+        <nuxt-link
+          to="/show"
+          class="navbar-item"
+          :class="{ 'is-active': activeUrl === 'show' }"
+        >
           Show
         </nuxt-link>
 
-        <nuxt-link to="/ask" class="navbar-item">
+        <nuxt-link
+          to="/ask"
+          class="navbar-item"
+          :class="{ 'is-active': activeUrl === 'ask' }"
+        >
           Ask
         </nuxt-link>
 
-        <nuxt-link to="/jobs" class="navbar-item">
+        <nuxt-link
+          to="/jobs"
+          class="navbar-item"
+          :class="{ 'is-active': activeUrl === 'jobs' }"
+        >
           Jobs
         </nuxt-link>
       </div>
@@ -55,5 +75,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    activeUrl() {
+      return this.$route.fullPath.split('?')[0].split('/')[1]
+    }
+  }
+}
 </script>

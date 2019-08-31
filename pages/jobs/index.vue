@@ -33,7 +33,7 @@ export default {
   async fetch({ store, query, error }) {
     if (query.page && query.page < 1)
       error({ statusCode: 404, message: 'You entered the wrong page query' })
-    await store.dispatch('hnList$fetch', 'topstories')
+    await store.dispatch('hnList$fetch', 'jobstories')
     if (
       query.page &&
       query.page > parseInt(Math.ceil(store.state.hnList.length / 10))
