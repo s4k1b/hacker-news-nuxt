@@ -31,3 +31,20 @@ body {
     }
   }
 }
+
+.comment-section {
+  width: 100%;
+}
+
+.comment-wrapper {
+  margin-left: 10px;
+  padding: 10px;
+  border-left: 3px solid $primary;
+}
+
+.single-comment {
+  .comment-info {
+    padding: 5px;
+    background-color: rgb(255, 244, 197);
+  }
+}

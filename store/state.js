@@ -1,3 +1,3 @@
 export default () => {
-  return { hnList: [], details: {} }
+  return { hnList: [], details: {}, user: {} }
 }

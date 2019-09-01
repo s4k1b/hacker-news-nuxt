@@ -19,5 +19,16 @@ export default {
     } catch (e) {
       throw e
     }
+  },
+
+  async userDetails$api({ commit }, id) {
+    try {
+      const resp = await this.$axios.get(
+        `https://hacker-news.firebaseio.com/v0/user/${id}.json`
+      )
+      commit('user$set', resp.data || {})
+    } catch (e) {
+      throw e
+    }
   }
 }

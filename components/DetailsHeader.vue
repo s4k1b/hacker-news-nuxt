@@ -10,6 +10,9 @@
           <nuxt-link :to="`/user/${details.by}`">{{ details.by }}</nuxt-link>
           {{ details.time | dayDifference }} ago
         </h2>
+        <h2 class="subtitle">
+          {{ (details.kids && details.kids.length) || 0 }} comments
+        </h2>
       </div>
     </div>
   </section>

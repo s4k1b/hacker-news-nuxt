@@ -4,5 +4,8 @@ export default {
   },
   details$set(state, ob) {
     state.details = { ...ob }
+  },
+  user$set(state, ob) {
+    state.user = { ...ob }
   }
 }
