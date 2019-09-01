@@ -23,3 +23,11 @@ body {
     }
   }
 }
+
+.hero.is-primary .subtitle {
+  a {
+    &:not(.button) {
+      color: #2a2d34;
+    }
+  }
+}
